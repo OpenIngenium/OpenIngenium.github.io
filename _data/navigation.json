@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "text": "About",
+      "url": "/about/"
+    },
+    {
+      "text": "Documentation",
+      "url": "/documentation/",
+      "sublinks": [
+        {
+          "text": "Architecture",
+          "url": "/documentation/architecture/"
+        },
+        {
+          "text": "System Requirements",
+          "url": "/documentation/system-requirements/"
+        },
+        {
+          "text": "User Guide",
+          "url": "/documentation/user-guide/"
+        }
+      ]
+    },
+    {
+      "text": "Contributors",
+      "url": "/contributors/"
+    }
+  ]
+}
