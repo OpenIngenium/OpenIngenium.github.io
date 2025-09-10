@@ -5,21 +5,21 @@ title: Contributors
 
 # Acknowledgements
 
-Ingenium could not have happened without the advocacy and support from the Jet Propulsion Laboratory Integrated Model Centric Engineering organization.
+Ingenium could not have happened without the advocacy and support from the Jet Propulsion Laboratory (JPL) Integrated Model Centric Engineering (IMCE) organization.
 
 Specifically the support of people like James Chase, Alejandro Jimenez, Chi Lin, and David Wagner were instrumental in its creation.
 
-In addition the early support and feedback of the JPL Integration and Test Community, both on projects (Europa Clipper and Psyche) and in management was critical to it's success. 
+Early support and feedback from the JPL Integration and Test Community, across the Europa Clipper and Psyche projects and in management, proved essential to its success.
 
-Special thanks to Brian Julius, Brian Bone, Shaun Standley, Rich Kinslow, Matt Roznek, Jonny Grinblat, Matt Marsh, Matt Stumbo, Ban Tieu
+Special thanks to Brian Julius, Brian Bone, Shaun Standley, Rich Kinslow, Matt Roznek, Jonny Grinblat, Matt Marsh, Matt Stumbo, and Ban Tieu
 
 # Contributors
 
 ## Curent Contributors
 
-### Christopher Swan: Project/Product Manager, System Engineer, Training
+### Christopher Swan: Project/Product Manager, System Engineer, Training and Support
 
-Chris Swan has guided the design of the Ingenium application since inception. 
+Chris Swan has guided the design of the Ingenium application since inception.
 
 ### Hongman Kim: Software Architect
 

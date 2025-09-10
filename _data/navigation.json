@@ -1,10 +1,6 @@
 {
   "items": [
     {
-      "text": "About",
-      "url": "/about/"
-    },
-    {
       "text": "Documentation",
       "url": "/documentation/",
       "sublinks": [
@@ -13,18 +9,22 @@
           "url": "/documentation/architecture/"
         },
         {
-          "text": "System Requirements",
-          "url": "/documentation/system-requirements/"
+          "text": "User Guide",
+          "url": "/documentation/user_guide/"
         },
         {
-          "text": "User Guide",
-          "url": "/documentation/user-guide/"
+          "text": "Publications",
+          "url": "/documentation/publications/"
         }
       ]
     },
     {
       "text": "Contributors",
       "url": "/contributors/"
+    },
+    {
+      "text": "License",
+      "url": "/license/"
     }
   ]
 }

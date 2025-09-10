@@ -15,30 +15,93 @@
       </div>
       <nav>
         <ul><li class="dropdown">
-              <a href="/about/">About</a>
-              
-            </li><li class="dropdown">
               <a href="/documentation/">Documentation</a>
               
                 <ul class="dropdown-content">
                   
                     <li><a href="/documentation/architecture/">Architecture</a></li>
                   
-                    <li><a href="/documentation/system-requirements/">System Requirements</a></li>
+                    <li><a href="/documentation/user_guide/">User Guide</a></li>
                   
-                    <li><a href="/documentation/user-guide/">User Guide</a></li>
+                    <li><a href="/documentation/publications/">Publications</a></li>
                   
                 </ul>
               
             </li><li class="dropdown">
               <a href="/contributors/">Contributors</a>
               
+            </li><li class="dropdown">
+              <a href="/license/">License</a>
+              
             </li></ul>
       </nav>
     </header>
   <main>
     <h1>Architecture</h1>
-<p>Information about the system architecture will go here.</p>
+<p><img src="../../assets/img/Ingenium%20Architecture.png" alt="Ingenium Architecture"></p>
+<center>Ingenium Architecture</center>
+<h1>Ingenium Primary Server</h1>
+<p>The Ingenium Primary Server component is a suite of microservices running in docker containers on a virtual or physical  server. All microservices communicate via REST requests, or in certain cases (Execution Monitor → UI) via websocokets. REST API is documented for each service in their associated Github repository using a mixture of OPEN API 2.0/3.0 (Swagger).</p>
+<h2>UI</h2>
+<p>The User interface is a combination of Django and Vue.JS.  The current architecture of the UI is that Django hosts a number of Vue.JS applications for each major UI page/function. This is because the UI was originally developed in Django and has been updated to Vue.JS over time.</p>
+<h2>Project Configuration/Dictionary</h2>
+<p>The Project Configuration / Dictionary service is a mechanism for Ingenium to cache project specific information and normalize if for us inside the application. This simplifies internal interfaces via standard formats and provides high performance query/autocomplete of the data. This includes dictionary information (command/telemetry), V&amp;V information (Requirements and Dictionary VIs), and project provided scripts.</p>
+<h2>Auth</h2>
+<p>Ingenium uses LDAP/RSA for authentication and then creates JWT (JSON web tokens) for authorization with the application. The auth service generates these tokens and manages access via defined roles, each with their own set of users/groups and permissions.</p>
+<h2>Core</h2>
+<p>As the name implies this is the core service of Ingenium. All procedure/execution management, creation, execution is managed through the core service. Core communicate with the archive service to store and retrieve procedure and execution data and with the Execution service to execute steps in procedures.</p>
+<h2>Archive</h2>
+<p>The archive service provides storage for procedures and executions via an Arango Database. It is accessed via Core.</p>
+<h2>Execution</h2>
+<p>The execution service executes steps via the embedded code and pushes the execution results to Core/Archive. The state of each execution such as the last value of channel values is stored in Redis.</p>
+<h2>Embedded Code</h2>
+<p>Each built in step has a corresponding set of logic to implement the step, send FSW/SSE commands, make queries to the venue service, and evaluate the results.</p>
+<h2>Minio</h2>
+<p>Ingenium is design to store attached information (images, etc) to either AWS S3 or locally via Minio (which locally mimics a S3 interface).</p>
+<h1>Ingenium Analytics Server</h1>
+<p>The Ingenium Analytics Server is another physical or virtual server that hosts a number of micro services in docker containers. These services all relate to post execution analysis and reporting and do not directly impact the core procedure development/execution functionality of the primary server.</p>
+<h2>Reporting</h2>
+<p>This service creates reports from Ingenium data. Due to the time required to build certain reports, this system has a queuing mechanism and informs users via email when their report is ready.</p>
+<p>Reports include: PDF of procedure/as run, Difference, Execution Summary (Excel)</p>
+<h2>Search</h2>
+<p>This service replicates the main Arango database and mirrors the execution and procedure data in Elastic Search for performant queries across procedures and executions</p>
+<h1>Ingenium Agent (Venue Server)</h1>
+<p>The Ingenium agent exists to translate RESTful queries from the Ingenium server to AMPCS and other local actions (custom scripts).  Note that this uses a dedicated JWT token that is not available to users. This ensures that only the Ingenium server can command via the Ingenium agent.</p>
+<h2>Supported Operations:</h2>
+<ul>
+<li>Commanding via AMPCS MTAK (Start MTAK, Send FSW CMD, Send File (VC2), Send SCMF, Send HW Cmd, Send SSE Command)</li>
+<li>Telemetry queries via AMPCS GLAD (query EVRs, query EHA) and AMPCS Chill (chill_get_chanvals, chill_get_evrs, chill_get_produts)</li>
+<li>1553 bus log parsing</li>
+<li>Ingenium Custom Scripts
+<ul>
+<li>This is an extension point of Ingenium that allows projects to write their own custom steps whose inputs and outputs will be rendered in Ingenium UI.</li>
+</ul>
+</li>
+</ul>
+<h1>Ingenium MTAK</h1>
+<p>Ingenium requires the ability to route command and telemetry requests to specific AMPCS sessions. This is to support the following use cases:</p>
+<p>Multiple users each running WSTS on the same server (different sessions)
+Commanding/Querying multiple sides of the spacecraft (e.g. TZ-A, TZ-B)</p>
+<p>This capability was implemented by AMPCS for M2020 but was not included in the AMPCS Multi-Mission Baseline.</p>
+<p>Ingenium maintains the capability in an Ingenium only version of MTAK which is delivered with Ingenium and is supported for use with Ingenium only.</p>
+<p>Note that AMPCS included the multi-session MTAK feature in AMPCS 9.1. Once that version is widely deployed across Ingenium customers the Ingenium MTAK will be retired.</p>
+<p>Open Ingenium Note: MTAK is part of AMPCS which is not open source.</p>
+<h1>Other</h1>
+<h2>System Tests</h2>
+<p>Ingenium has a suite of system tests which test the entire backend (server → client) without the user interface and using the venue simulator.</p>
+<h2>Ingenium Reference Scripts</h2>
+<p>Ingenium provides a suite of tools and python packages to aid interfacing and querying Ingenium.</p>
+<p>These tools include:</p>
+<p>Ingenium Integrated Report
+Ingenium V&amp;V Report
+Ingenium Procedure Validator 
+Ingenium python libraries for Custom Script development (similar to mtak library but using Ingenium functions)</p>
+<p>These libraries can be used by themselves or extended by projects for project specific applications.</p>
+<p>Open Ingenium Note: Ingenium References Scripts are being refactors into <a href="https://github.com/OpenIngenium/ingenium-lib">Ingenium-lib</a></p>
+<h2>Deployment</h2>
+<p>This is a suite of tools that will deploy Ingenium to either test or production venues.</p>
+<h2>Venue Simulator</h2>
+<p>This is a mock of the venue server that is used for automated tests. It does not communicate with AMPCS or custom scripts. Instead it allows test codes to change the expected behavior of its API to implement tests.</p>
 
   </main>
   <footer>
