@@ -7,7 +7,7 @@ title: Contributors
 
 Ingenium could not have happened without the advocacy and support from the Jet Propulsion Laboratory (JPL) Integrated Model Centric Engineering (IMCE) organization.
 
-Specifically the support of people like James Chase, Alejandro Jimenez, Chi Lin, and David Wagner were instrumental in its creation.
+Specifically the support of people like James Chase, Alejandro Jimenez, Chi Lin, Todd Bayer, and David Wagner were instrumental in its creation.
 
 Early support and feedback from the JPL Integration and Test Community, across the Europa Clipper and Psyche projects and in management, proved essential to its success.
 
