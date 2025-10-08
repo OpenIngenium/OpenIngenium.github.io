@@ -11,7 +11,7 @@ Specifically the support of people like James Chase, Alejandro Jimenez, Chi Lin,
 
 Early support and feedback from the JPL Integration and Test Community, across the Europa Clipper and Psyche projects and in management, proved essential to its success.
 
-Special thanks to Brian Julius, Brian Bone, Shaun Standley, Rich Kinslow, Matt Roznek, Jonny Grinblat, Matt Marsh, Matt Stumbo, and Ban Tieu
+Special thanks to Brian Julius, Brian Bone, Shaun Standley, Rich Kinslow, Matt Roznek, Jonny Grinblat, Matt Marsh, Matt Stumbo, Valeria Salazar, Paige Arthur, and Ban Tieu
 
 # Contributors
 
