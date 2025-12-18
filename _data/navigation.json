@@ -1,0 +1,30 @@
+{
+  "items": [
+    {
+      "text": "Documentation",
+      "url": "/documentation/",
+      "sublinks": [
+        {
+          "text": "Architecture",
+          "url": "/documentation/architecture/"
+        },
+        {
+          "text": "User Guide",
+          "url": "/documentation/user_guide/"
+        },
+        {
+          "text": "Publications",
+          "url": "/documentation/publications/"
+        }
+      ]
+    },
+    {
+      "text": "Contributors",
+      "url": "/contributors/"
+    },
+    {
+      "text": "License",
+      "url": "/license/"
+    }
+  ]
+}

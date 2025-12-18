@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Ingenium</title>
+  <link rel="icon" type="image/png" href="/assets/img/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+      <div class="header-left">
+        <a href="/"><img src="/assets/img/logo.png" alt="Open Ingenium Logo"></a>
+        <span>Open Ingenium</span>
+      </div>
+      <nav>
+        <ul>
+          {%- for item in navigation.items -%}
+            <li class="dropdown">
+              <a href="{{ item.url }}">{{ item.text }}</a>
+              {% if item.sublinks %}
+                <ul class="dropdown-content">
+                  {% for sublink in item.sublinks %}
+                    <li><a href="{{ sublink.url }}">{{ sublink.text }}</a></li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>&copy; 2025 California Institute of Technology. Government sponsorship acknowledged.</p>
+  </footer>
+</body>
+</html>

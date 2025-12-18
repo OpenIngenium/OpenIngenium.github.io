@@ -1,0 +1,24 @@
+{
+  "name": "openingenium.github.io",
+  "version": "1.0.0",
+  "description": "A website for the application \"Open Ingenium\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenIngenium/OpenIngenium.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenIngenium/OpenIngenium.github.io/issues"
+  },
+  "homepage": "https://github.com/OpenIngenium/OpenIngenium.github.io#readme"
+}
