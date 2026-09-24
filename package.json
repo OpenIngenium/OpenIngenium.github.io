@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "mkdocs:serve": "mkdocs serve",
+    "mkdocs:build": "mkdocs build"
   },
   "keywords": [],
   "author": "",
