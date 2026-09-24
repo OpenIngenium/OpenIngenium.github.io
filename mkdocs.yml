@@ -51,9 +51,12 @@ nav:
   - About: about.md
   - Contributors: contributors.md
   - License: license.md
+  - News:
+    - blog/index.md
 
 plugins:
   - search
+  - blog
 
 markdown_extensions:
   - pymdownx.emoji
