@@ -9,6 +9,7 @@ hide:
 ## Current Release
 
 Current Release Version: 15.0.0
+
 Current Development Version: 15.1.0
 
 ## Genesis
