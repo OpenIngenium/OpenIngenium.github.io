@@ -1,7 +1,5 @@
 ---
 hide:
-  #- navigation
-  - header
   - toc
 ---
 
