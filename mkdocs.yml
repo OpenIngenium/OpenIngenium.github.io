@@ -1,0 +1,80 @@
+site_name: Open Ingenium
+repo_url: https://github.com/OpenIngenium
+repo_name: Open Ingenium
+site_description: A website for the application "Open Ingenium"
+site_author: California Institute of Technology
+copyright: '&copy; 2026 California Institute of Technology. Government sponsorship acknowledged.'
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+  logo: assets/img/ingenium-logo-light.svg
+  favicon: assets/img/ingenium-favicon.svg
+  custom_dir: docs/overrides
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - content.code.copy
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  generator: false
+
+nav:
+  - Home: index.md
+  - Documentation:
+    - Overview: documentation/index.md
+    - Architecture: documentation/architecture.md
+    - User Guide:
+      - Overview: documentation/user_guide/index.md
+      # - Administration: documentation/user_guide/administration.md
+      # - Built-in Steps: documentation/user_guide/built_in_steps.md
+      # - Deployment and Configuration: documentation/user_guide/delpoyment_and_config.md
+      # - Editing Procedure Execution: documentation/user_guide/editing_procedure_execution.md
+      # - Executing a Procedure: documentation/user_guide/executing_a_procedure.md
+      # - Import/Export: documentation/user_guide/import_export.md
+      # - Procedure Creation (CM): documentation/user_guide/procedure_creation_cm.md
+      # - Reporting and Search: documentation/user_guide/reporting_and_search.md
+      # - Step Development: documentation/user_guide/step_development.md
+      # - VNV Integration: documentation/user_guide/vnv_integration.md
+    - Publications: documentation/publications.md
+  - About: about.md
+  - Contributors: contributors.md
+  - License: license.md
+  - News:
+    - blog/index.md
+
+plugins:
+  - search
+  - blog
+
+markdown_extensions:
+  - pymdownx.emoji
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.arithmatex
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - admonition
+
+docs_dir: docs
+site_dir: mkdocs_site
