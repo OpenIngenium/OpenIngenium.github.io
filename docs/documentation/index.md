@@ -7,6 +7,6 @@ title: Documentation
 This section contains the documentation for Open Ingenium.
 
 - [Architecture](./architecture/)
-- [User Guide](./user-guide/)
+- [User Guide](./user_guide/)
 - [Publications](./publications/)
 
