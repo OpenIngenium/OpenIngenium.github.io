@@ -37,16 +37,16 @@ nav:
     - Architecture: documentation/architecture.md
     - User Guide:
       - Overview: documentation/user_guide/index.md
-      # - Administration: documentation/user_guide/administration.md
-      # - Built-in Steps: documentation/user_guide/built_in_steps.md
-      # - Deployment and Configuration: documentation/user_guide/delpoyment_and_config.md
-      # - Editing Procedure Execution: documentation/user_guide/editing_procedure_execution.md
-      # - Executing a Procedure: documentation/user_guide/executing_a_procedure.md
-      # - Import/Export: documentation/user_guide/import_export.md
-      # - Procedure Creation (CM): documentation/user_guide/procedure_creation_cm.md
-      # - Reporting and Search: documentation/user_guide/reporting_and_search.md
-      # - Step Development: documentation/user_guide/step_development.md
-      # - VNV Integration: documentation/user_guide/vnv_integration.md
+      - Procedure Creation (CM): documentation/user_guide/procedure_creation_cm.md
+      - Editing Procedure Execution: documentation/user_guide/editing_procedure_execution.md
+      - Built-in Steps: documentation/user_guide/built_in_steps.md
+      - Executing a Procedure: documentation/user_guide/executing_a_procedure.md
+      - Reporting and Search: documentation/user_guide/reporting_and_search.md
+      - Import/Export: documentation/user_guide/import_export.md
+      - VNV Integration: documentation/user_guide/vnv_integration.md
+      - Step Development: documentation/user_guide/step_development.md
+      - Administration: documentation/user_guide/administration.md
+      - Deployment and Configuration: documentation/user_guide/deployment_and_config.md
     - Publications: documentation/publications.md
   - About: about.md
   - Contributors: contributors.md
