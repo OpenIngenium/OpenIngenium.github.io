@@ -14,7 +14,7 @@ The tool palette is on the left side of the screen and contains the following th
 - List of steps to drag onto the workspace. They are color coded to indicate if they are executable or not (green is executable).
 
 !!! note "Dictionaries"
-    Dictionaries must be loaded in Ingenium and flagged as "Published" or "Released" to be used by Ingenium. Please note that this only governs the assistance that Ingenium provides for inputting commands and telemetry. The user must ensure that the vehicle is operating under compatible FSW and dictionaries loaded in the ground data system. See [Project Configuration](deployment_and_config.md#flight-sse-dictionaries).
+    Dictionaries must be loaded in Ingenium and flagged as "Published" or "Released" to be used by Ingenium. Please note that this only governs the assistance that Ingenium provides for inputting commands and telemetry. The user must ensure that the vehicle is operating under compatible FSW and dictionaries loaded in the ground data system. See [Project Configuration](deployment_and_config.md#flight--sse-dictionaries).
 
 !!! warning "Screenshot needed"
     **Execution** – the palette as shown while executing (execution controls, status, dictionaries, step list).
