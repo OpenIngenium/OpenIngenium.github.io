@@ -386,11 +386,6 @@ What do you want to do if an entry fails?
 When your script has run to completion you need to make one last update to the `output_dict` to set the overall status. Note that if you have entries you should check their status before recording the overall status.
 
 ```python title="Final Outputs"
-# Final output before declaring an ERROR
-custom_script_status = 'ERROR'
-output_dict['custom_script_status'] = custom_script_status
-write_output_file(output_dict, output_file_abs_path)
-sys.exit(-1)
 
 # Review entries to generate overall status
 custom_script_status = 'PASS'
