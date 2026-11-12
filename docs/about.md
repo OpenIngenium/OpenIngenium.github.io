@@ -8,13 +8,13 @@ hide:
 
 ## Current Release
 
-Current Release Version: 15.0.0
+Current Release Version: 15.1.0
 
-Current Development Version: 15.1.0
+Current Development Version: 15.2.0
 
 ## Genesis
 
-Following the [SMAP](https://smap.jpl.nasa.gov/) and the [Mars Science Laboratory](https://science.nasa.gov/mission/msl-curiosity/) integration and test (I&T) engineers at the Jet Propulsion Laboratory found that the formats and methods for test procedures could vary widely across different teams and test venues. This existed even when all of the teams/venues were focused on testing the spacecraft at the same (system) level.
+Following the [SMAP](https://smap.jpl.nasa.gov/) and the [Mars Science Laboratory](https://science.nasa.gov/mission/msl-curiosity/) projects, integration and test (I&T) engineers at the Jet Propulsion Laboratory found that the formats and methods for test procedures could vary widely across different teams and test venues. This existed even when all of the teams/venues were focused on testing the spacecraft at the same (system) level.
 
 This was due to a number of reasons including:
 - Team Skill Set (primarily related to software developmenent skills)
